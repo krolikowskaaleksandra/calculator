@@ -1,0 +1,50 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.number-button {
+    background-color: $white;
+    @include stylesForButton();
+
+    &:hover {
+        @include stylesForButtonHover();
+    }
+
+}
+
+.button,
+.operator-button {
+    background-color: $grey;
+    @include stylesForButton();
+
+    &:hover {
+        @include stylesForButtonHover();
+    }
+}
+
+.row {
+    display: table;
+    table-layout: fixed;
+    width: 200px;
+}
+
+.column {
+    display: table-cell;
+}
+
+#clear,
+#zero {
+    @include widthOfDoubleButton;
+}
+
+
+#value {
+    height: 70px;
+    color: $white;
+    text-align: right;
+    font-size: 45px;
+    background: linear-gradient(90deg, rgba(218, 65, 169, 1) 0%, rgba(252, 176, 69, 1) 92%);
+    padding-right: 10px;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: nowrap;
+}
